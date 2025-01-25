@@ -1,0 +1,124 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-to-cart;user-add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User add product to cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user login system",
+            "match": {
+              "location": "features/step-definitions/addToCart.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1735857125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user add product to cart",
+            "match": {
+              "location": "features/step-definitions/addToCart.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65683958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "product should be added to cart",
+            "match": {
+              "location": "features/step-definitions/addToCart.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135928708
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-to-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add to Cart",
+    "tags": [],
+    "uri": "features/addToCart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;user-logs-in-with-correct-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User logs in with correct credentials",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the login page",
+            "match": {
+              "location": "features/step-definitions/login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1456985374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter valid credentials",
+            "match": {
+              "location": "features/step-definitions/login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158084249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "features/step-definitions/login.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95410875
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "tags": [],
+    "uri": "features/login.feature"
+  }
+]

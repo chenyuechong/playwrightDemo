@@ -1,0 +1,19 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "esModuleInterop": true,
+      "strict": true,
+      "resolveJsonModule": true, 
+      "skipLibCheck": true 
+
+    },
+    "include": [
+      "src/**/*.ts",
+      "features/**/*.ts"
+    ]
+  }
+  

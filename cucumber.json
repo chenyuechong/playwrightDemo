@@ -1,0 +1,14 @@
+
+{
+    "compiler": [
+      "node_modules/@cucumber/tsflow"
+    ],
+    "require": [
+      "features/step-definitions/*.ts"
+    ],
+    "format": [
+        "json:cucumber_report.json",
+        "html:cucumber_report.html"
+    ]
+  }
+  
