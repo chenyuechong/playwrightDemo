@@ -7,8 +7,8 @@
       "features/step-definitions/*.ts"
     ],
     "format": [
-        "json:cucumber_report.json",
-        "html:cucumber_report.html"
+        "json:reports/cucumber_report.json",
+        "html:reports/cucumber_report.html"
     ]
   }
   

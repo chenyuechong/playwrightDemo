@@ -1,14 +1,9 @@
-import { Page, Locator } from 'playwright';
+
 import { BasePage } from './basePage';
 
 
 export class ProductsPage extends BasePage {
  
-
-    constructor(page: Page) {
-        super(page);
-       
-      }
 
     // Method to log in using credentials
     async addToCart(productName: string): Promise<void> {

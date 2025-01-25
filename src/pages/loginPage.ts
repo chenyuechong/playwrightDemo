@@ -1,6 +1,7 @@
 // src/pages/LoginPage.ts
-import { Page, Locator } from 'playwright';
+import { Page } from 'playwright';
 import { BasePage } from './basePage';
+
 
 
 export class LoginPage extends BasePage {
@@ -10,12 +11,10 @@ export class LoginPage extends BasePage {
   public successMessage = this.page.locator('.title');;
 
   constructor(page: Page) {
-    super(page);
-   
+    super(page); // Pass the `page` instance to the base class
   }
-
   // Method to log in using credentials
-  async login(username: string, password: string) {
+  async login(username: string, password: string) : Promise<void>{
     await this.usernameField.fill(username);
     await this.passwordField.fill(password);
     await this.submitButton.click();

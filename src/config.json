@@ -1,5 +1,7 @@
 
 {
+    "browser": "chromium",
+    "headless": false,  
     "url": "https://www.saucedemo.com/inventory.html",
     "username": "standard_user",
     "password": "secret_sauce",

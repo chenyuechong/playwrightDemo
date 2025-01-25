@@ -10,16 +10,24 @@
         "name": "User add product to cart",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 470639791
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
             "name": "user login system",
             "match": {
-              "location": "features/step-definitions/addToCart.steps.ts:13"
+              "location": "test/step-definitions/addToCart.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1735857125
+              "duration": 2031730208
             }
           },
           {
@@ -28,11 +36,11 @@
             "line": 5,
             "name": "user add product to cart",
             "match": {
-              "location": "features/step-definitions/addToCart.steps.ts:21"
+              "location": "test/step-definitions/addToCart.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 65683958
+              "duration": 42987375
             }
           },
           {
@@ -41,11 +49,19 @@
             "line": 6,
             "name": "product should be added to cart",
             "match": {
-              "location": "features/step-definitions/addToCart.steps.ts:26"
+              "location": "test/step-definitions/addToCart.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 135928708
+              "duration": 133499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22125457
             }
           }
         ],
@@ -58,7 +74,7 @@
     "keyword": "Feature",
     "name": "Add to Cart",
     "tags": [],
-    "uri": "features/addToCart.feature"
+    "uri": "test/features/addToCart.feature"
   },
   {
     "description": "",
@@ -71,16 +87,24 @@
         "name": "User logs in with correct credentials",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227934541
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
             "name": "I open the login page",
             "match": {
-              "location": "features/step-definitions/login.steps.ts:12"
+              "location": "test/step-definitions/login.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 1456985374
+              "duration": 769065874
             }
           },
           {
@@ -89,11 +113,11 @@
             "line": 5,
             "name": "I enter valid credentials",
             "match": {
-              "location": "features/step-definitions/login.steps.ts:19"
+              "location": "test/step-definitions/login.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 158084249
+              "duration": 148939540
             }
           },
           {
@@ -102,11 +126,19 @@
             "line": 6,
             "name": "I should be redirected to the dashboard",
             "match": {
-              "location": "features/step-definitions/login.steps.ts:23"
+              "location": "test/step-definitions/login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 95410875
+              "duration": 4188916
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11493375
             }
           }
         ],
@@ -119,6 +151,6 @@
     "keyword": "Feature",
     "name": "Login functionality",
     "tags": [],
-    "uri": "features/login.feature"
+    "uri": "test/features/login.feature"
   }
 ]
