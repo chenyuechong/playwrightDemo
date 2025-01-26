@@ -1,9 +1,14 @@
 Feature: Add to Cart and checkout
+  Background:
+    Given user open the login page
+    When user enter valid credentials
+    Then user should be redirected to the product page
 
+    
   Scenario: User add product to cart
-    Given user login system
-    When user add product to cart
-    Then product should be added to cart
+    When user clicks "<productName>" in the products list
+    Then user should be redirected to the product details page
+    When user clicks the "Add to Cart" button 
     When user click cart icon
     And user click checkout
     And user fill in your information witht the following details
@@ -12,3 +17,6 @@ Feature: Add to Cart and checkout
     When user click finish in order confirmation page
     When user click back home in order complete page
  
+Examples:
+    | productName          |
+    | Sauce Labs Backpack  |

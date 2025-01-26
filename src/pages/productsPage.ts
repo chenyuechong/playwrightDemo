@@ -19,8 +19,22 @@ export class ProductsPage extends BasePage {
         return headerText === 'Products';
     }
 
+    async viewProductDetails(productName: string) {
+        const items = await this.page.locator('.inventory_item').elementHandles();
+        for (const item of items) {
+            const title = await item.$('.inventory_item_name ');
+            if (title) {
+                const textContent = await title.textContent();
+                if (textContent?.trim() === productName) {
+                    await title.click();
+                    break;
 
-    // Method to log in using credentials
+                }
+            }
+        }
+    }
+
+
     async addToCart(productName: string): Promise<void> {
 
         // Find all elements with the class 'item'
@@ -45,6 +59,39 @@ export class ProductsPage extends BasePage {
             }
         }
     }
+
+    async removeFromCart(product: string) {
+        const button = await this.getRemoveButton(product);
+        if (button) {
+            await button.click();
+        }
+    }
+
+    async getRemoveButton(productName: string): Promise<Locator | null> {
+
+        // Find all elements with the class 'item'
+        const items = await this.page.locator('.inventory_item').elementHandles();
+
+        for (const item of items) {
+
+            const title = await item.$('.inventory_item_name');
+
+
+            if (title) {
+                const textContent = await title.textContent();
+                if (textContent?.trim() === productName) {
+
+                    const button = await item.$('button:has-text("Remove")');
+                    if (button) {
+                        return this.page.locator(`#${await button.getAttribute('id')}`);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+
     async getCartCount(): Promise<number> {
         const cartCountText = await this.cartBadge.textContent();
         return cartCountText ? parseInt(cartCountText) : 0;
@@ -52,5 +99,5 @@ export class ProductsPage extends BasePage {
 
     async clickCartIcon() {
         await this.cartIcon.click();
-      }
+    }
 }

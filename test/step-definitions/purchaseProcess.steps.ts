@@ -6,6 +6,7 @@ import { CustomerInfoPage } from '../../src/pages/customerInfoPage';
 import { OrderConfirmationPage } from '../../src/pages/orderConfirmationPage';
 import { OrderCompletedPage } from '../../src/pages/orderCompletedPage';
 import { Customer } from '../../src/models/customer';
+import { ProductDetailsPage } from '../../src/pages/productDetailsPage';
 
 
 let productsPage: ProductsPage;
@@ -13,10 +14,11 @@ let cartPage: CartPage;
 let customerInfoPage : CustomerInfoPage;
 let orderConfirmationPage : OrderConfirmationPage;
 let orderCompletedPage : OrderCompletedPage;
+let productDetailsPage: ProductDetailsPage;
 
 When('user click cart icon', async function() {
-    productsPage = new ProductsPage(page);
-    await productsPage.clickCartIcon();
+    productDetailsPage = new ProductDetailsPage(page);
+    await productDetailsPage.clickCartIcon();
 });
 
 When('user click checkout', async function() {
