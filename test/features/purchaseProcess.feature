@@ -1,4 +1,4 @@
-Feature: Add to Cart and checkout
+Feature: purchase process
   Background:
     Given user open the login page
     When user enter valid credentials
