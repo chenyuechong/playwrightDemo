@@ -1,0 +1,7 @@
+
+{
+    "browser": "chromium",
+    "headless": false,  
+    "waitTime": 20000
+}
+  

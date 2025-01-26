@@ -1,4 +1,5 @@
-import { Page } from 'playwright';
+import { Locator, Page } from 'playwright';
+import * as config from '../playwright.json';
 
 export class BasePage {
   protected page: Page;
@@ -28,5 +29,8 @@ export class BasePage {
 
   async isVisible(selector: string): Promise<boolean> {
     return await this.page.locator(selector).isVisible();
+  }
+  async waitForLocator(locator: Locator) {
+    await locator.waitFor({ timeout: config.waitTime });
   }
 }

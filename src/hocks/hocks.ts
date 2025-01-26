@@ -4,7 +4,7 @@ import * as fs from 'fs';
 
 
 // Load config.json
-const config = JSON.parse(fs.readFileSync('src/config.json', 'utf-8'));
+const config = JSON.parse(fs.readFileSync('src/playwright.json', 'utf-8'));
 
 let browser: Browser;
 let page: Page;
