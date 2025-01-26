@@ -4,7 +4,7 @@ import { BasePage } from './basePage';
 export class CartPage extends BasePage {
   
   private checkoutButton: Locator;
-  private productLocator: Locator;
+  private headerLocator: Locator;
   private continueShoppingButton: Locator;
 
   constructor(page: Page) {
@@ -12,13 +12,12 @@ export class CartPage extends BasePage {
    
     this.checkoutButton = page.locator('#checkout');
     this.continueShoppingButton = page.locator('#continue-shopping');
-    this.productLocator = page.locator('.product');
+    this.headerLocator = page.locator('.title');
   }
 
- 
-
-  async isProductInCart(product: string): Promise<boolean> {
-    return this.page.locator(`text=${product}`).isVisible();
+  async isOnCartPage(): Promise<boolean> {
+    const headerText = await this.headerLocator.waitFor({ state: 'visible' }).then(() => this.headerLocator.textContent());
+    return headerText === 'Your Cart';
   }
 
   async clickCheckout() {

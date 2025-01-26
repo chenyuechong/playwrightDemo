@@ -13,9 +13,11 @@ Feature: purchase process
     And user click checkout
     And user fill in your information witht the following details
       | firstname | lastname | zipcode |
-      | John      | Doe      | 12345    |
+      | John      | Doe      | 12345   |
+    Then user should be redirected to the order confirmation page
     When user click finish in order confirmation page
-    When user click back home in order complete page
+    Then user should be redirected to the order completed page
+    And user should see the message "THANK YOU FOR YOUR ORDER"
  
 Examples:
     | productName          |
